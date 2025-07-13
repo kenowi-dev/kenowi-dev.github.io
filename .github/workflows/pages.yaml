@@ -33,6 +33,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        with:
+          static_site_generator: "sveltekit"
+
       - name: build
         # Only needed if project is not run in name.github.io, since it will be served from name.github.io/repo
         # env:
